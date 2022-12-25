@@ -18,6 +18,7 @@
 syntax="proto2";
 package example;
 
+// 告诉protoc要生成Service基类
 option cc_generic_services = true;
 
 message EchoRequest {
@@ -28,6 +29,7 @@ message EchoResponse {
       required string message = 1;
 };
 
+// 定义service类型
 service EchoService {
       rpc Echo(EchoRequest) returns (EchoResponse);
 };
